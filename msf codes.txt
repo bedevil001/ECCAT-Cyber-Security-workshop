@@ -1,0 +1,6 @@
+nmap -script-updatedb 
+locate *.nse 
+nmap -script
+locate *.nse | grepsmb
+nmap -script *smb-vul* -p 443 192.168.13.129
+nmap --script smb-vuln-ms17-010 -p 443 192.168.13.129 
